@@ -58,10 +58,10 @@ class RubyCsv
     acts_as_csv
 end
 
-m = RubyCsv.new
-# puts 'headers: ', m.headers.inspect
-# puts 'csv_contents: ', m.csv_contents.inspect
+csv = RubyCsv.new
+# puts 'headers: ', csv.headers.inspect
+# puts 'csv_contents: ', csv.csv_contents.inspect
 
-# m.each {|row| puts row.row_contents}
-m.each {|row| puts row.one}
+# csv.each {|row| puts row.row_contents}
+csv.each {|row| puts row.one}
 
