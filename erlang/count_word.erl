@@ -3,5 +3,8 @@
 
 countw([]) -> 0;
 countw([32|Tail]) -> countw(Tail);
-countw(String) -> 1 + countw(lists:dropwhile(fun(C)->C/=32 end,  String)).
+countw(String) -> 1 + countw(dropword(String)).
 
+dropword([]) -> [];
+dropword([32|Tail]) -> [32|Tail];
+dropword([_|Tail]) -> dropword(Tail).
